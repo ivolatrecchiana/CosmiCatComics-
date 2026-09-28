@@ -1,0 +1,118 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #e740db;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+@keyframes mover-gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.boton-colorful {
+    align-items: center;
+    background: #121212;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    padding: 10px 30px;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.boton-colorful span {
+    position: relative;
+    z-index: 2;
+}
+
+.boton-colorful:hover {
+    box-shadow: 0 0 20px rgba(255, 65, 129, 0.7),0 0 35px rgba(168, 85, 247, 0.5);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.boton-colorful:hover::before {
+    animation: mover-gradiente 3s linear infinite;
+}
+
+.boton-colorful::before {
+    background: linear-gradient(45deg, #ff4181, #a855f7, #00d2ff, #ff4181);
+    background-size: 400%;
+    border-radius: 32px;
+    bottom: -2px;
+    content: '';
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.contenedor-logo {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.encabezado-sitio {
+    align-items: center;
+    background: #0a0a0f;
+    border-bottom: 2px solid #ff41fb;
+    box-shadow: 0 4px 20px rgba(255, 65, 251, 0.3);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    position: relative;
+    z-index: 100;
+}
+
+.logo-redondo {
+    border: 3px solid #ff41f6;
+    border-radius: 50%;
+    height: 60px;
+    object-fit: cover;
+    width: 60px;
+}
+
+.nombre-sitio {
+    color: #ff41fb;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff41fb;
+}
+
+.boton-iniciar {
+    background-color: transparent;
+    border: 2px solid #3b3e4a !important;
+    color: #a0a5b5;
+}
+
+.boton-iniciar:hover {
+    background-color: rgba(168, 85, 247, 0.1);
+    border-color: #a855f7 !important;
+    color: floralwhite;
+}

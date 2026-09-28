@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COSMIC 🐱 - Homepage</title>
+        <link rel="stylesheet" href="CSS-All.css">
+        <link rel="stylesheet" href="CSS-Homepage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body style="overflow-y: auto;">     
+        <header class="encabezado-sitio">
+            <div class="contenedor-logo"> 
+                <a href="Homepage.html"><img src="logo.jpeg" alt="COSMIC" class="logo-redondo"></a>
+                <span class="nombre-sitio">COSMIC</span>
+            </div>   
+            <nav class="navegacion-principal">
+                <a href="Homepage.html" class="enlace-nav">Inicio</a>
+                <a href="#" class="enlace-nav">Populares</a>
+                <div class="desplegable">
+                    <button type="button" class="enlace-nav boton-desplegable" onclick="toggleCategorias()">Categorías <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="dropdown-categorias" class="menu-desplegable">
+                        <a href="#scifi">🤖 Sci-Fi / Cyberpunk</a>
+                        <a href="#shonen">🔥 Shonen / Acción</a>
+                        <a href="#fantasia">🐉 Fantasía</a>
+                        <a href="#terror">👻 Terror / Misterio</a>
+                        <a href="#romance">💖 Romance / Slice of Life</a>
+                        <a href="#seinen">⚔️ Seinen</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Cómics Destacados</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
+                <div style="background: #121212; border: 2px solid #a855f7; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);">
+                    <img src="gato-ciudad.jpg" alt="Comic" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="font-size: 1.2rem; margin: 15px 0 5px 0;">Cyber Cat Vol. 1</h3>
+                    <p style="color: #a0a5b5; font-size: 0.85rem; margin-bottom: 15px;">Sci-Fi / Cyberpunk</p>
+                    <a href="#" class="boton-colorful" style="font-size: 0.8rem; padding: 8px 15px;"><span>Leer Ahora 📖</span></a>
+                </div>
+                <div style="background: #121212; border: 2px solid #a855f7; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);">
+                    <img src="gato-ciudad.jpg" alt="Comic" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px;">
+                    <h3 style="font-size: 1.2rem; margin: 15px 0 5px 0;">Cyber Cat Vol. 1</h3>
+                    <p style="color: #a0a5b5; font-size: 0.85rem; margin-bottom: 15px;">Ciencia Ficción / Cyberpunk</p>
+                    <a href="#" class="boton-colorful" style="font-size: 0.8rem; padding: 8px 15px;"><span>Leer Ahora 📖</span></a>
+                </div>
+            </div>
+        </main>
+        <script>
+            function toggleCategorias() {
+                document.getElementById("dropdown-categorias").classList.toggle("mostrar");
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.boton-desplegable')) {
+                    var dropdowns = document.getElementsByClassName("menu-desplegable");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('mostrar')) {
+                            openDropdown.classList.remove('mostrar');
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
