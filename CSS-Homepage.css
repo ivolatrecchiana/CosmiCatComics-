@@ -77,3 +77,16 @@
     display: flex;
     gap: 20px;
 }
+
+@media (max-width: 768px) {
+    .navegacion-principal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-desplegable {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
