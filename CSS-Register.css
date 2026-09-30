@@ -22,11 +22,10 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: space-around;
-    overflow: hidden;
-    padding: 0 50px;
-    width: 100vw;
+    padding: 20px 50px;
+    width: 100%;
 }
 
 .logo-comic {
@@ -35,6 +34,9 @@
     flex: 1;
     justify-content: center;
     z-index: 2;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .logo-comic h1 {
@@ -61,6 +63,7 @@
     transform: rotate(-1deg);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
+    box-sizing: border-box;
     z-index: 2;
 }
 
@@ -116,4 +119,28 @@
 .tarjeta-comic:hover {
     box-shadow: 10px 10px 0px #a855f7, 10px 10px 20px #ff4181;
     transform: rotate(0deg) scale(1.01);
+}
+
+@media (max-width: 768px) {
+    .contenedor-registro {
+        padding: 20px 15px;
+    }
+
+    .logo-comic {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo-comic h1 {
+        font-size: 2.5rem;
+    }
+
+    .tarjeta-comic {
+        max-width: 100%;
+        transform: none;
+    }
+
+    .tarjeta-comic:hover {
+        transform: none;
+    }
 }
