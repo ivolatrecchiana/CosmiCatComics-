@@ -1,3 +1,20 @@
+body.modo-claro .tarjeta-comic {
+    background: #ffffff !important;
+    color: #1d1d1f !important;
+    border-color: #a855f7 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.modo-claro .tarjeta-comic label {
+    color: #333333 !important;
+}
+
+body.modo-claro input[type="text"] {
+    background-color: #f1f3f5 !important;
+    border: 1.5px solid #cccccc !important;
+    color: #1d1d1f !important;
+}
+
 .boton-registro {
     background: linear-gradient(135deg, #a855f7, #ec4899);
     box-shadow: 0px 4px 12px rgba(236, 72, 153, 0.4);

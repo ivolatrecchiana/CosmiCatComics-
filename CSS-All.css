@@ -8,6 +8,30 @@ body {
     padding: 0;
 }
 
+body.modo-claro {
+    background-color: #f5f5f7 !important;
+    color: #1d1d1f !important;
+}
+
+body.modo-claro .encabezado-sitio {
+    background: #ffffff !important;
+    border-bottom: 2px solid #a855f7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.modo-claro .tarjeta-login {
+    background: #ffffff !important;
+    color: #1d1d1f !important;
+    border-color: #a855f7 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.modo-claro input[type="email"] {
+    background-color: #f1f3f5 !important;
+    border: 1.5px solid #cccccc !important;
+    color: #1d1d1f !important;
+}
+
 h1, h2, h3 {
     color: #e740db;
     letter-spacing: 2px;
