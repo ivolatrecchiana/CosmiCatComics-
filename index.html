@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>COSMIC 🐱 - Entrypoint</title>
-        <link rel="stylesheet" href="CSS-All.css">
-        <link rel="stylesheet" href="CSS-Entrypoint.css">
-    </head>
-    <body>
-        <main class="contenedor-tarjeta-flip">
-            <div class="tarjeta-3d">
-                <div class="cara frente-tarjeta">
-                    <h2>Descubre nuevos comics</h2>
-                    <p>¡Pasa el mouse o toca para revelar una nueva aventura!</p>
-                </div>
-                <div class="cara atras-tarjeta">
-                    <header class="encabezado-sitio">
-                        <div class="contenedor-logo"> 
-                            <a><img src="logo.jpeg" alt="COSMIC" class="logo-redondo"></a>
-                            <span class="nombre-sitio">COSMIC</span>
-                        </div>       
-                    </header>     
-                    <section>
-                        <h1>Bienvenido a COSMIC</h1>
-                        <br>
-                        <h3>¿Qué es COSMIC?</h3>
-                        <p>COSMIC es una plataforma de lectura en línea que ofrece una experiencia de lectura única y emocionante.</p>
-                        <p>¡Únete a nuestra comunidad de lectores y descubre libros que te encantarán!</p>
-                        <br>
-                        <a href="Register.html" class="boton-colorful"><span>Siguiente 🚀</span></a>
-                    </section>
-                </div> 
-            </div>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMIC 🐱</title>
+    <link rel="stylesheet" href="CSS-All.css">
+</head>
+<body>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor-logo">
+            <img src="logo.jpg" alt="Logo COSMIC" class="logo-redondo">
+            <span class="nombre-sitio">COSMIC</span>
+        </div>
+        <nav class="navegacion-principal">
+            <a href="#" class="enlace-nav">Inicio</a>
+            <a href="#" class="enlace-nav">Populares</a>
+            <button class="boton-desplegable">Categorías</button>
+            <button id="btn-tema">☀ Modo Claro</button>
+        </nav>
+        <div class="opciones-derecha">
+            <a href="#" class="boton-iniciar">Iniciar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenedor-login">
+        <div class="tarjeta-login">
+            <h1>Bienvenido</h1>
+            <form>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="tu@correo.com" required>
+                <button type="submit" class="boton-colorful" style="margin-top: 20px;">
+                    <span>Iniciar sesión</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+</body>
 </html>

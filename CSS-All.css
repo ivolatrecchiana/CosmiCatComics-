@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     line-height: 1.4;
     margin: 0;
@@ -16,14 +16,12 @@ body.modo-claro {
 body.modo-claro .encabezado-sitio {
     background: #ffffff !important;
     border-bottom: 2px solid #a855f7;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 body.modo-claro .tarjeta-login {
     background: #ffffff !important;
     color: #1d1d1f !important;
     border-color: #a855f7 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 body.modo-claro input[type="email"] {
@@ -39,15 +37,9 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-@keyframes mover-gradiente {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 .boton-colorful {
     align-items: center;
-    background: #121212;
+    background-color: #a855f7;
     border: none;
     border-radius: 30px;
     color: #ffffff;
@@ -57,13 +49,10 @@ h1, h2, h3 {
     font-weight: 800;
     justify-content: center;
     letter-spacing: 1px;
-    overflow: hidden;
     padding: 10px 30px;
-    position: relative;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
-    z-index: 1;
+    transition: background-color 0.2s ease;
 }
 
 .boton-colorful span {
@@ -72,26 +61,11 @@ h1, h2, h3 {
 }
 
 .boton-colorful:hover {
-    box-shadow: 0 0 20px rgba(255, 65, 129, 0.7), 0 0 35px rgba(168, 85, 247, 0.5);
-    transform: translateY(-4px) scale(1.03);
+    background-color: #be6eff;
 }
 
-.boton-colorful:hover::before {
-    animation: mover-gradiente 3s linear infinite;
-}
-
-.boton-colorful::before {
-    background: linear-gradient(45deg, #ff4181, #a855f7, #00d2ff, #ff4181);
-    background-size: 400%;
-    border-radius: 32px;
-    bottom: -2px;
-    content: '';
-    left: -2px;
-    position: absolute;
-    right: -2px;
-    top: -2px;
-    transition: opacity 0.3s ease-in-out;
-    z-index: -1;
+.boton-colorful:active {
+    background-color: #8b3dc7;
 }
 
 .contenedor-logo {
@@ -104,7 +78,6 @@ h1, h2, h3 {
     align-items: center;
     background: #0a0a0f;
     border-bottom: 2px solid #ff41fb;
-    box-shadow: 0 4px 20px rgba(255, 65, 251, 0.3);
     display: flex;
     justify-content: space-between;
     padding: 15px 5%;
@@ -125,19 +98,22 @@ h1, h2, h3 {
     font-size: 1.6rem;
     font-weight: 900;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px #ff41fb;
 }
 
 .boton-iniciar {
     background-color: transparent;
     border: 2px solid #3b3e4a !important;
     color: #a0a5b5;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .boton-iniciar:hover {
-    background-color: rgba(168, 85, 247, 0.1);
-    border-color: #a855f7 !important;
+    background-color: #3b3e4a;
     color: floralwhite;
+}
+
+.boton-iniciar:active {
+    background-color: #21232d;
 }
 
 .contenedor-login {
@@ -158,7 +134,6 @@ h1, h2, h3 {
     max-width: 400px;
     box-sizing: border-box;
     text-align: center;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
 .tarjeta-login input[type="email"] {
